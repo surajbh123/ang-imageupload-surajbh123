@@ -1,0 +1,28 @@
+
+
+<div class="container">
+    <form class="w-50 mx-auto">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Default file input example</label>
+            <input class="form-control" (change)="onFileSelected($event)" type="file" id="formFile">
+            
+            <div class="progress offset-9 my-2 d-block float-right  " *ngIf="this.showProgress" >
+                <div class="progress-bar bg-info progress-bar-striped" role="progressbar"  [ngStyle]="{'width': this.progress+'%'}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"> {{this.progress}}%</div>
+              </div>              
+          </div>
+        <button type="button" (click)="submitForm()"  class="btn btn-primary">Submit</button>
+      </form>
+</div>
+
+<button type="button" (click)="submitForm()"  class="btn btn-primary">View File</button>
+
+<div class="container">
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+  </div> 
+</div>
